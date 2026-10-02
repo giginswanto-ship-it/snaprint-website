@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAPRINT DIGITAL PRINTING - Great Spot To Print | Tambun Selatan, Bekasi</title>
+    <!-- Meta SEO -->
+    <meta name="description" content="Snaprint Digital Printing - Solusi percetakan digital modern, cepat, berkualitas & presisi di Jl Kalijambe-Lambangsari, Tambun Selatan, Kab Bekasi. Hotline: 081311933172.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        accent: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gradient-banner {
+            background: radial-gradient(circle at 80% 20%, #0369a1 0%, #075985 45%, #082f49 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .badge-glow {
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px -10px rgba(2, 132, 199, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen antialiased selection:bg-accent-500 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 text-[11px] sm:text-xs">
+                <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Workshop Buka Hari Ini (08.00 - 21.00 WIB)
+                </span>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="hidden md:flex items-center gap-1 text-slate-300">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-400"></i>
+                    Jl. Kalijambe-Lambangsari, Tambun Selatan, Bekasi
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] sm:text-xs">
+                <a href="tel:081311933172" class="hover:text-white flex items-center gap-1 font-semibold text-sky-300 transition-colors">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+                    Hotline: 0813-1193-3172
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- OWNER MODE ALERT BAR (DYNAMIC) -->
+    <div id="ownerBar" class="hidden bg-amber-500 text-slate-950 px-4 py-2.5 text-xs font-bold text-center flex justify-between items-center shadow-inner z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+            <span class="flex items-center justify-center gap-2">
+                <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                <span><strong>MODE OWNER AKTIF:</strong> Anda dapat mengedit langsung HPP, Harga Jual, Margin Profit, dan Status Produk.</span>
+            </span>
+            <div class="flex items-center gap-3">
+                <a href="#ownerPanelSection" class="underline hover:text-white font-extrabold">Buka Panel Owner</a>
+                <button onclick="logoutOwner()" class="bg-slate-900 text-white px-3 py-1 rounded-md text-[11px] font-bold hover:bg-slate-800 transition-colors">Keluar Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 transition-all shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-brand-700 via-brand-600 to-accent-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-brand-600/30 group-hover:scale-105 transition-all">
+                        <i data-lucide="printer" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1">
+                            <span class="text-2xl font-black tracking-tight text-slate-900 leading-none">SNAPRINT</span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-accent-500"></span>
+                        </div>
+                        <span class="text-[10px] font-extrabold tracking-widest text-brand-700 uppercase block mt-1">
+                            DIGITAL PRINTING &bull; GREAT SPOT TO PRINT
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center gap-7 font-semibold text-xs uppercase tracking-wider text-slate-600">
+                    <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
+                    <a href="#katalog" class="hover:text-brand-600 transition-colors">Katalog & Layanan</a>
+                    <a href="#kalkulator" class="hover:text-brand-600 transition-colors">Kalkulator Cetak</a>
+                    <a href="#keunggulan" class="hover:text-brand-600 transition-colors">Keunggulan</a>
+                    <a href="#panduan" class="hover:text-brand-600 transition-colors">Panduan File</a>
+                    <a href="#kontak" class="hover:text-brand-600 transition-colors">Lokasi & Kontak</a>
+                </nav>
+
+                <!-- Actions / Buttons -->
+                <div class="flex items-center gap-3">
+                    <button id="ownerToggleBtn" onclick="toggleOwnerMode()" class="px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 border border-slate-300 text-slate-700 hover:bg-slate-100 hover:border-slate-400 transition-all shadow-sm">
+                        <i data-lucide="lock" class="w-3.5 h-3.5 text-slate-500"></i>
+                        <span id="ownerBtnText">Mode Owner</span>
+                    </button>
+                    
+                    <a href="#kalkulator" class="hidden sm:inline-flex bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white px-4 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md shadow-brand-600/20 hover:shadow-lg items-center gap-2">
+                        <i data-lucide="calculator" class="w-4 h-4"></i>
+                        Hitung Cetak
+                    </a>
+
+                    <!-- Mobile Menu Trigger -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white/98 backdrop-blur-lg px-6 pt-4 pb-6 space-y-3 shadow-xl">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-bold border-b border-slate-100">Home</a>
+            <a href="#katalog" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-bold border-b border-slate-100">Katalog Produk & Layanan</a>
+            <a href="#kalkulator" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-bold border-b border-slate-100">Kalkulator Estimasi Harga</a>
+            <a href="#keunggulan" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-bold border-b border-slate-100">Keunggulan & Cara Order</a>
+            <a href="#panduan" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-bold border-b border-slate-100">Panduan Desain Siap Cetak</a>
+            <a href="#kontak" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-bold">Kontak & Workshop Tambun</a>
+            
+            <div class="pt-2">
+                <a href="https://wa.me/6281311933172?text=Halo%20Admin%20Snaprint%20Digital%20Printing,%20saya%20ingin%20tanya%20layanan%20cetak" target="_blank" class="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold rounded-xl flex items-center justify-center gap-2 text-xs shadow-md">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    WhatsApp Admin (0813-1193-3172)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="gradient-banner text-white relative overflow-hidden py-20 lg:py-28">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-sky-400/20 via-transparent to-transparent pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Left Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-sky-200 badge-glow">
+                        <span class="w-2.5 h-2.5 rounded-full bg-accent-500 animate-pulse"></span>
+                        Solusi Cetak Digital Modern &bull; Tambun Selatan, Bekasi
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15]">
+                        Great Spot To Print <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-200 to-accent-400">
+                            SNAPRINT DIGITAL PRINTING
+                        </span>
+                    </h1>
+                    
+                    <p class="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Mitra percetakan terpercaya untuk segala kebutuhan promosi bisnis, branding toko, event, kemasan UMKM, hingga kebutuhan kantor dan personal. Hasil warna tajam, bahan presisi, dan pengerjaan kilat.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#kalkulator" class="w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-extrabold rounded-2xl shadow-xl shadow-accent-500/30 hover:scale-[1.02] transition-all text-center flex items-center justify-center gap-2.5 text-sm">
+                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                            Hitung Biaya Cetak Instant
+                        </a>
+                        <a href="https://wa.me/6281311933172?text=Halo%20Snaprint%20Digital%20Printing,%20saya%20ingin%20konsultasi%20pesanan%20cetak" target="_blank" class="w-full sm:w-auto px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-2xl backdrop-blur-md transition-all text-center flex items-center justify-center gap-2 text-sm">
+                            <i data-lucide="message-square" class="w-5 h-5 text-emerald-300"></i>
+                            Konsultasi via WA (081311933172)
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-white/15 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">100%</div>
+                            <div class="text-[11px] sm:text-xs text-sky-200 font-medium mt-0.5">Garansi Kualitas Warna</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">1 Hari</div>
+                            <div class="text-[11px] sm:text-xs text-sky-200 font-medium mt-0.5">Express Work Ready</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">50+</div>
+                            <div class="text-[11px] sm:text-xs text-sky-200 font-medium mt-0.5">Kategori & Pilihan Produk</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Interactive Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md bg-white/10 backdrop-blur-2xl p-6 sm:p-7 rounded-3xl border border-white/25 shadow-2xl space-y-5">
+                        <div class="flex items-center justify-between border-b border-white/15 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2.5 bg-accent-500 rounded-2xl text-white shadow-md">
+                                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <div class="font-extrabold text-sm text-white">Layanan Cetak Unggulan</div>
+                                    <div class="text-[11px] text-sky-200">Langsung Jadi & Siap Kirim</div>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[11px] font-bold rounded-full">
+                                Workshop Aktif
+                            </span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3.5 hover:bg-white/10 transition-colors">
+                                <div class="p-2 bg-sky-500/20 rounded-xl text-sky-300 shrink-0">
+                                    <i data-lucide="flag" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-white">Banner Outdoor & Indoor Signage</div>
+                                    <div class="text-[10px] text-sky-200">Flexi 280gr, Korchin 440gr, Albatros & Roll Up</div>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3.5 hover:bg-white/10 transition-colors">
+                                <div class="p-2 bg-sky-500/20 rounded-xl text-sky-300 shrink-0">
+                                    <i data-lucide="layers" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-white">Stiker Label & Custom Die-Cut</div>
+                                    <div class="text-[10px] text-sky-200">Vinyl, Bontax/Chromo, Transparan & Hologram</div>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3.5 hover:bg-white/10 transition-colors">
+                                <div class="p-2 bg-sky-500/20 rounded-xl text-sky-300 shrink-0">
+                                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-white">Promosi, Kartu Nama & Packaging</div>
+                                    <div class="text-[10px] text-sky-200">Brosur, Kartu Nama Box, Hardbox & Paper Bag</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Mini Bar -->
+                        <div class="pt-2 p-3 rounded-xl bg-slate-900/60 border border-white/10 flex items-start gap-2.5 text-xs text-slate-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent-400 shrink-0 mt-0.5"></i>
+                            <span class="text-[11px] leading-snug">
+                                <strong>Lokasi Workshop:</strong> Jl. Kalijambe-Lambangsari, Tambun Selatan, Kab. Bekasi
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG PRODUK & LAYANAN -->
+    <section id="katalog" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600 block mb-1">Pilihan Produk Lengkap</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900">Katalog Produk & Layanan Cetak</h2>
+                <p class="text-slate-500 text-sm mt-1">Pilih spesifikasi yang Anda butuhkan atau hitung langsung di kalkulator cetak kami.</p>
+            </div>
+            
+            <!-- Filters & Search -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <div class="relative">
+                    <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="searchInput" oninput="filterProducts()" placeholder="Cari nama produk / bahan..." class="pl-10 pr-4 py-2.5 border border-slate-300 rounded-xl text-xs w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white font-medium shadow-sm">
+                </div>
+                <select id="statusFilter" onchange="filterProducts()" class="px-3.5 py-2.5 border border-slate-300 rounded-xl text-xs bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 font-semibold text-slate-700 shadow-sm">
+                    <option value="all">Semua Status</option>
+                    <option value="available">Tersedia (Ready Cetak)</option>
+                    <option value="unavailable">Belum Tersedia / Pre-Order</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Filter Categories Slider -->
+        <div class="flex gap-2.5 overflow-x-auto pb-4 mb-8 no-scrollbar" id="categoryPills">
+            <!-- Injected via JavaScript -->
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Injected via JavaScript -->
+        </div>
+    </section>
+
+    <!-- OWNER MANAGEMENT SECTION (VISIBLE WHEN OWNER MODE ACTIVE) -->
+    <section id="ownerPanelSection" class="hidden bg-slate-900 text-slate-100 py-16 border-y-4 border-amber-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-slate-800 pb-6">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold mb-2">
+                        <i data-lucide="shield" class="w-3.5 h-3.5"></i> Snaprint Owner & Management Dashboard
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white">Panel Kelola HPP, Harga Jual & Stok</h2>
+                    <p class="text-slate-400 text-xs mt-1">Ubah langsung data produk di tabel bawah. Perubahan otomatis tersimpan dan sinkron dengan kalkulator.</p>
+                </div>
+                
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="resetDefaultProducts()" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold rounded-xl text-xs flex items-center gap-1.5 border border-slate-700 transition-all">
+                        <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                        Reset Default Data
+                    </button>
+                    <button onclick="openAddProductModal()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold rounded-xl text-xs flex items-center gap-2 shadow-lg transition-all">
+                        <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                        Tambah Produk Baru
+                    </button>
+                </div>
+            </div>
+
+            <!-- Owner Table -->
+            <div class="overflow-x-auto bg-slate-800/90 rounded-2xl border border-slate-700 shadow-2xl">
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="bg-slate-950 text-slate-400 uppercase font-bold text-[11px] tracking-wider border-b border-slate-700">
+                        <tr>
+                            <th class="p-4">Produk & Kategori</th>
+                            <th class="p-4">Satuan</th>
+                            <th class="p-4">HPP Modal (Rp)</th>
+                            <th class="p-4">Harga Jual (Rp)</th>
+                            <th class="p-4">Margin (%)</th>
+                            <th class="p-4">Status</th>
+                            <th class="p-4 text-center">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ownerProductTable" class="divide-y divide-slate-700/80 font-medium">
+                        <!-- Rendered dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR & WHATSAPP DIRECT ORDER SECTION -->
+    <section id="kalkulator" class="py-16 lg:py-24 bg-gradient-to-b from-slate-100 to-slate-200/80 border-t border-b border-slate-300/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-black uppercase tracking-widest text-brand-600 block mb-1">Simulasi Biaya & Pesanan</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900">Kalkulator Estimasi Cetak Online</h2>
+                <p class="text-slate-600 text-sm mt-2">
+                    Hitung estimasi pesanan Anda secara transparan dan kirim rincian pesanan langsung ke WhatsApp official <strong>081311933172</strong>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Calculator Form Card -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
+                    <div>
+                        <label class="block text-xs font-black text-slate-800 uppercase tracking-wider mb-2">1. Pilih Produk Cetak</label>
+                        <select id="calcProductSelect" onchange="updateCalcFields()" class="w-full p-3.5 border border-slate-300 rounded-2xl text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none bg-slate-50 font-bold text-slate-900 shadow-sm">
+                            <!-- Populated dynamically with Available products -->
+                        </select>
+                    </div>
+
+                    <!-- Custom Dimensions (Dynamic for Banner/Sticker m2) -->
+                    <div id="dimensionInputs" class="bg-brand-50/70 p-5 rounded-2xl border border-brand-200/80 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-brand-900 uppercase">Ukuran Custom (Spanduk / Banner / Plotter)</span>
+                            <span class="text-[11px] font-semibold text-brand-700 bg-white px-2.5 py-0.5 rounded-full border border-brand-200">Satuan Centimeter (cm)</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Panjang (cm)</label>
+                                <input type="number" id="calcLength" value="100" min="10" oninput="calculateEstimate()" class="w-full p-3 border border-slate-300 rounded-xl text-sm font-bold focus:ring-2 focus:ring-brand-500 focus:outline-none bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Lebar / Tinggi (cm)</label>
+                                <input type="number" id="calcWidth" value="100" min="10" oninput="calculateEstimate()" class="w-full p-3 border border-slate-300 rounded-xl text-sm font-bold focus:ring-2 focus:ring-brand-500 focus:outline-none bg-white">
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-[11px] text-brand-800">
+                            <i data-lucide="info" class="w-3.5 h-3.5 shrink-0"></i>
+                            <span>Perhitungan spanduk/banner dihitung per meter persegi (m²). Minimal order dihitung 1 m².</span>
+                        </div>
+                    </div>
+
+                    <!-- Quantity Input -->
+                    <div>
+                        <label class="block text-xs font-black text-slate-800 uppercase tracking-wider mb-2">2. Jumlah / Quantity Pesanan</label>
+                        <div class="flex items-center gap-3">
+                            <input type="number" id="calcQty" value="1" min="1" oninput="calculateEstimate()" class="w-full p-3.5 border border-slate-300 rounded-2xl text-base font-black focus:ring-2 focus:ring-brand-500 focus:outline-none bg-white">
+                            <span id="calcUnitLabel" class="text-xs font-extrabold text-brand-800 bg-brand-50 px-5 py-3.5 rounded-2xl border border-brand-200 min-w-[90px] text-center uppercase">Pcs</span>
+                        </div>
+                    </div>
+
+                    <!-- Finishing Addons -->
+                    <div>
+                        <label class="block text-xs font-black text-slate-800 uppercase tracking-wider mb-2">3. Pilihan Finishing Tambahan (Opsional)</label>
+                        <div class="space-y-2.5" id="finishingOptions">
+                            <label class="flex items-center justify-between p-3.5 rounded-2xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors text-xs font-medium bg-slate-50/50">
+                                <span class="flex items-center gap-2.5">
+                                    <input type="checkbox" value="2500" onchange="calculateEstimate()" class="calc-finishing w-4 h-4 rounded text-brand-600 focus:ring-brand-500 border-slate-300">
+                                    <span>Laminasi Panas Glossy / Doff</span>
+                                </span>
+                                <span class="text-slate-600 font-bold">+Rp 2.500 / unit</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3.5 rounded-2xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors text-xs font-medium bg-slate-50/50">
+                                <span class="flex items-center gap-2.5">
+                                    <input type="checkbox" value="1000" onchange="calculateEstimate()" class="calc-finishing w-4 h-4 rounded text-brand-600 focus:ring-brand-500 border-slate-300">
+                                    <span>Mata Ayam / Ring Lubang Pojok Banner</span>
+                                </span>
+                                <span class="text-slate-600 font-bold">+Rp 1.000 / pcs</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3.5 rounded-2xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors text-xs font-medium bg-slate-50/50">
+                                <span class="flex items-center gap-2.5">
+                                    <input type="checkbox" value="5000" onchange="calculateEstimate()" class="calc-finishing w-4 h-4 rounded text-brand-600 focus:ring-brand-500 border-slate-300">
+                                    <span>Cutting Custom (Kiss-Cut / Die-Cut)</span>
+                                </span>
+                                <span class="text-slate-600 font-bold">+Rp 5.000 / lembar</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-3.5 rounded-2xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors text-xs font-medium bg-slate-50/50">
+                                <span class="flex items-center gap-2.5">
+                                    <input type="checkbox" value="10000" onchange="calculateEstimate()" class="calc-finishing w-4 h-4 rounded text-brand-600 focus:ring-brand-500 border-slate-300">
+                                    <span>Jilid Spiral Kawat / Lem Panas Buku</span>
+                                </span>
+                                <span class="text-slate-600 font-bold">+Rp 10.000 / buku</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Notes Input -->
+                    <div>
+                        <label class="block text-xs font-black text-slate-800 uppercase tracking-wider mb-1">4. Catatan Pesanan / Spesifikasi File</label>
+                        <textarea id="calcNotes" rows="2" placeholder="Contoh: File siap cetak dalam bentuk PDF/TIFF, ingin warna kontras, siap diambil besok siang..." class="w-full p-3 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none bg-slate-50"></textarea>
+                    </div>
+                </div>
+
+                <!-- Estimasi Output & Order Card -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 via-slate-900 to-brand-950 text-white p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl space-y-6 sticky top-28">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <span class="text-xs font-black uppercase tracking-wider text-sky-400 flex items-center gap-2">
+                            <i data-lucide="receipt" class="w-4 h-4"></i> Rincian Estimasi
+                        </span>
+                        <span class="text-[10px] bg-accent-500/20 text-accent-300 border border-accent-500/40 px-3 py-1 rounded-full font-bold">
+                            Live Calculation
+                        </span>
+                    </div>
+
+                    <div class="space-y-3.5 text-xs">
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <span class="text-slate-400">Produk:</span>
+                            <span id="summaryProduct" class="font-bold text-white text-right max-w-[240px] truncate">-</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <span class="text-slate-400">Ukuran / Luas:</span>
+                            <span id="summarySize" class="font-bold text-sky-300">-</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <span class="text-slate-400">Jumlah / Qty:</span>
+                            <span id="summaryQty" class="font-bold text-white">-</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <span class="text-slate-400">Harga Satuan:</span>
+                            <span id="summaryUnitPrice" class="font-bold text-slate-300">-</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <span class="text-slate-400">Finishing:</span>
+                            <span id="summaryFinishing" class="font-bold text-slate-300 text-right max-w-[200px] leading-tight">Tanpa Finishing</span>
+                        </div>
+                    </div>
+
+                    <!-- Total Block -->
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl space-y-1.5">
+                        <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Total Estimasi Harga</div>
+                        <div id="totalEstimatePrice" class="text-3xl sm:text-4xl font-black text-accent-400">Rp 0</div>
+                        <div class="text-[11px] text-slate-400 pt-1 leading-snug">
+                            * Harga belum termasuk ongkos kirim (jika diantar) atau penyesuaian desain custom.
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Button -->
+                    <button onclick="sendToWhatsApp()" class="w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black rounded-2xl shadow-xl shadow-emerald-500/25 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 text-sm">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Pesan via WhatsApp (0813-1193-3172)
+                    </button>
+
+                    <div class="text-[11px] text-slate-400 text-center flex items-center justify-center gap-1.5">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                        Pesan otomatis langsung diformat rapi untuk Admin Snaprint
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 LANGKAH MUDAH & KEUNGGULAN -->
+    <section id="keunggulan" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs font-black uppercase tracking-widest text-brand-600 block mb-1">Praktis & Terorganisir</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900">4 Langkah Mudah Cetak di Snaprint</h2>
+            <p class="text-slate-500 text-sm mt-1">Sistem order cepat tanpa harus antre lama di tempat.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm relative text-center space-y-3 card-hover">
+                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto font-black text-xl border border-brand-100 shadow-sm">1</div>
+                <h3 class="font-extrabold text-slate-900 text-base">Pilih & Hitung</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">Pilih produk dan gunakan kalkulator online untuk mengetahui estimasi biaya secara transparan.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm relative text-center space-y-3 card-hover">
+                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto font-black text-xl border border-brand-100 shadow-sm">2</div>
+                <h3 class="font-extrabold text-slate-900 text-base">Kirim File via WA</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">Klik tombol pesan WA, kirimkan file cetak (PDF/TIFF/JPG) ke admin hotline kami <strong>081311933172</strong>.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm relative text-center space-y-3 card-hover">
+                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto font-black text-xl border border-brand-100 shadow-sm">3</div>
+                <h3 class="font-extrabold text-slate-900 text-base">Acc & Produksi</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">Admin akan melakukan preflight file, setelah pembayaran pesanan langsung masuk antrean cetak kilat.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm relative text-center space-y-3 card-hover">
+                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto font-black text-xl border border-brand-100 shadow-sm">4</div>
+                <h3 class="font-extrabold text-slate-900 text-base">Ambil / Delivery</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">Pesanan dapat diambil di workshop Tambun Selatan atau dikirim menggunakan kurir instan ke lokasi Anda.</p>
+            </div>
+        </div>
+
+        <!-- Fitur Keunggulan Banner -->
+        <div class="mt-20 bg-gradient-to-r from-brand-950 via-slate-900 to-brand-900 rounded-3xl p-8 lg:p-14 text-white shadow-2xl relative overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+                <div class="space-y-3">
+                    <div class="p-3 bg-brand-500/20 rounded-2xl w-fit text-sky-400 border border-brand-500/30">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-white">Mesin & Tinta High-Resolution</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Menggunakan mesin digital offset, plotter outdoor & indoor resolusi tinggi untuk gradasi warna tajam tanpa blur.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="p-3 bg-brand-500/20 rounded-2xl w-fit text-sky-400 border border-brand-500/30">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-white">Tepat Waktu & Express Service</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Jadwal pengerjaan terencana secara akurat. Tersedia layanan kilat untuk kebutuhan mendesak / same-day.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="p-3 bg-brand-500/20 rounded-2xl w-fit text-sky-400 border border-brand-500/30">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-white">Bahan Berkualitas & Tahan Lama</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Pilihan bahan kertas, flexi, vinyl, hingga sticker dengan gramasi asli dan daya rekat kuat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANDUAN FILE SIAP CETAK & PREFLIGHT -->
+    <section id="panduan" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs font-black uppercase tracking-widest text-brand-600 block">Checklist File Desain</span>
+                    <h2 class="text-3xl font-black text-slate-900">Panduan File Siap Cetak (Agar Hasil Maksimal)</h2>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Pastikan file desain Anda memenuhi standar percetakan digital untuk menghindari warna belang, tulisan buram, atau gambar terpotong.
+                    </p>
+                    <div class="p-4 bg-sky-50 rounded-2xl border border-sky-100 flex items-start gap-3 text-xs text-sky-900">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+                        <span>Belum punya desain siap cetak? Tim kami siap membantu setting layout dan konsultasi format file gratis via WhatsApp.</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+                        <div class="flex items-center gap-2 text-brand-700 font-bold text-xs">
+                            <i data-lucide="palette" class="w-4 h-4"></i> Color Mode CMYK
+                        </div>
+                        <p class="text-[11px] text-slate-600">Gunakan format warna <strong>CMYK</strong> (bukan RGB) agar warna cetak sesuai dengan tampilan visual.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+                        <div class="flex items-center gap-2 text-brand-700 font-bold text-xs">
+                            <i data-lucide="image" class="w-4 h-4"></i> Resolusi Min. 300 DPI
+                        </div>
+                        <p class="text-[11px] text-slate-600">Pastikan resolusi minimal <strong>300 DPI</strong> (untuk cetak dokumen/stiker) atau 150 DPI (untuk banner besar) agar tajam.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+                        <div class="flex items-center gap-2 text-brand-700 font-bold text-xs">
+                            <i data-lucide="crop" class="w-4 h-4"></i> Berikan Bleed & Margin Aman
+                        </div>
+                        <p class="text-[11px] text-slate-600">Tambahkan bleed 2-3 mm di sekeliling desain agar teks penting tidak terpotong pisau potong.</p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+                        <div class="flex items-center gap-2 text-brand-700 font-bold text-xs">
+                            <i data-lucide="file-check" class="w-4 h-4"></i> Format File PDF / TIFF / JPG
+                        </div>
+                        <p class="text-[11px] text-slate-600">Kirim dalam bentuk <strong>PDF High-Res, TIFF, PNG</strong> atau CDR/AI dengan font yang sudah di-<em>convert/curves</em>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & KONTAK LOKASI -->
+    <footer id="kontak" class="bg-slate-950 text-slate-400 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-2.5 text-white">
+                        <div class="w-9 h-9 bg-brand-600 rounded-xl flex items-center justify-center text-white shadow-md">
+                            <i data-lucide="printer" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="font-black text-lg tracking-tight text-white block leading-none">SNAPRINT</span>
+                            <span class="text-[9px] font-bold text-brand-400 tracking-wider">DIGITAL PRINTING</span>
+                        </div>
+                    </div>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        <strong>"Great Spot To Print"</strong> — Pusat percetakan digital modern, akurat, dan terpercaya untuk seluruh kebutuhan personal dan bisnis Anda.
+                    </p>
+                    <div class="flex items-center gap-2 pt-1">
+                        <a href="https://wa.me/6281311933172" target="_blank" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="WhatsApp">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:081311933172" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="Telepon">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigasi -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-black uppercase tracking-widest text-white">Navigasi Halaman</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#katalog" class="hover:text-white transition-colors">Katalog & Layanan Cetak</a></li>
+                        <li><a href="#kalkulator" class="hover:text-white transition-colors">Kalkulator Estimasi Harga</a></li>
+                        <li><a href="#keunggulan" class="hover:text-white transition-colors">Keunggulan & Cara Order</a></li>
+                        <li><a href="#panduan" class="hover:text-white transition-colors">Panduan File Siap Cetak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Jam Kerja & Layanan -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-black uppercase tracking-widest text-white">Jam Operasional</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li class="flex justify-between">
+                            <span>Senin - Sabtu:</span>
+                            <span class="text-white font-semibold">08.00 - 21.00 WIB</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Minggu:</span>
+                            <span class="text-white font-semibold">10.00 - 17.00 WIB</span>
+                        </li>
+                        <li class="pt-2">
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-[10px] inline-flex items-center gap-1 border border-emerald-500/30">
+                                <i data-lucide="check" class="w-3 h-3"></i> Konsultasi WhatsApp 24 Jam
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Info Alamat & Hotline -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-black uppercase tracking-widest text-white">Alamat & Hotline</h4>
+                    <div class="space-y-2.5 text-xs text-slate-300">
+                        <p class="flex items-start gap-2 leading-relaxed">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent-500 shrink-0 mt-0.5"></i>
+                            <span>Jl. Kalijambe-Lambangsari, Tambun Selatan, Kab. Bekasi</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                            <a href="tel:081311933172" class="hover:text-white font-bold text-white">0813-1193-3172</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                            <a href="https://wa.me/6281311933172" target="_blank" class="hover:text-white font-bold text-emerald-400">Chat WhatsApp Official</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 SNAPRINT DIGITAL PRINTING. All rights reserved. Great Spot To Print.</p>
+                <div class="flex items-center gap-4 text-[11px]">
+                    <span class="text-slate-400">Jl Kalijambe-Lambangsari, Tambun Selatan, Kab Bekasi</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/6281311933172?text=Halo%20Admin%20Snaprint%20Digital%20Printing,%20saya%20ingin%20tanya%20info%20cetak" target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-4 py-3 rounded-full shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-black text-xs border-2 border-white/80">
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        <span class="hidden sm:inline">Chat WA: 081311933172</span>
+    </a>
+
+    <!-- OWNER LOGIN MODAL -->
+    <div id="loginModal" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl space-y-4 border border-slate-200">
+            <div class="text-center space-y-1">
+                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                    <i data-lucide="lock" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-black text-slate-900">Akses Mode Owner</h3>
+                <p class="text-xs text-slate-500">Masukkan PIN Owner untuk melihat & mengubah HPP serta harga jual.</p>
+            </div>
+            <div>
+                <input type="password" id="ownerPinInput" placeholder="PIN (Default: 1234)" class="w-full p-3.5 border border-slate-300 rounded-2xl text-center text-xl font-black tracking-widest focus:ring-2 focus:ring-amber-500 focus:outline-none bg-slate-50">
+                <p id="pinErrorMsg" class="text-xs text-rose-500 hidden mt-1.5 text-center font-bold">PIN Salah! Gunakan PIN default: 1234</p>
+            </div>
+            <div class="flex gap-2.5">
+                <button onclick="closeLoginModal()" class="w-1/2 py-3 border border-slate-300 font-bold text-slate-700 rounded-xl text-xs hover:bg-slate-100 transition-colors">Batal</button>
+                <button onclick="verifyOwnerPin()" class="w-1/2 py-3 bg-amber-500 hover:bg-amber-600 font-extrabold text-slate-950 rounded-xl text-xs shadow-md transition-all">Masuk Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD PRODUCT MODAL (FOR OWNER) -->
+    <div id="addProductModal" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 text-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl space-y-4">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-3.5">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <i data-lucide="plus-circle" class="w-5 h-5 text-emerald-400"></i> Tambah Produk Baru
+                </h3>
+                <button onclick="closeAddProductModal()" class="text-slate-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <form id="newProductForm" onsubmit="saveNewProduct(event)" class="space-y-3.5 text-xs">
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">Nama Produk Cetak</label>
+                    <input type="text" id="newProdName" required placeholder="Contoh: X-Banner 60x160cm Flexi Korea" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Kategori</label>
+                        <select id="newProdCategory" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            <option value="Outdoor & Banner">Outdoor & Banner</option>
+                            <option value="Stiker & Label">Stiker & Label</option>
+                            <option value="Promosi & Kartu">Promosi & Kartu</option>
+                            <option value="Cetak Dokumen/Buku">Cetak Dokumen/Buku</option>
+                            <option value="Merchandise & Packaging">Merchandise & Packaging</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Satuan</label>
+                        <select id="newProdUnit" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            <option value="m²">m² (Meter Persegi)</option>
+                            <option value="Lembar">Lembar</option>
+                            <option value="Pcs">Pcs</option>
+                            <option value="Box">Box</option>
+                            <option value="Buku">Buku</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">HPP Modal (Rp)</label>
+                        <input type="number" id="newProdHpp" required min="0" placeholder="12000" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Harga Jual (Rp)</label>
+                        <input type="number" id="newProdPrice" required min="0" placeholder="25000" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">Status Ketersediaan</label>
+                    <select id="newProdStatus" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <option value="available">Tersedia (Ready Cetak)</option>
+                        <option value="unavailable">Belum Tersedia / Pre-Order</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">Deskripsi Singkat / Spesifikasi</label>
+                    <textarea id="newProdDesc" rows="2" placeholder="Spesifikasi bahan, gramasi, ketahanan, dll..." class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
+                </div>
+                
+                <div class="pt-2 flex gap-3">
+                    <button type="button" onclick="closeAddProductModal()" class="w-1/2 py-3 bg-slate-800 hover:bg-slate-700 font-bold rounded-xl text-slate-300 transition-colors">Batal</button>
+                    <button type="submit" class="w-1/2 py-3 bg-emerald-600 hover:bg-emerald-500 font-black text-white rounded-xl shadow-lg transition-all">Simpan Produk</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        // Default initial products catalog
+        const defaultProducts = [
+            {
+                id: '1',
+                name: 'Banner Spanduk Flexi 280gr (Outdoor)',
+                category: 'Outdoor & Banner',
+                unit: 'm²',
+                hpp: 12000,
+                price: 25000,
+                status: 'available',
+                desc: 'Bahan Flexi Standard outdoor tahan panas & hujan. Cocok untuk spanduk toko, plang usaha, & event.',
+                isCustomDimension: true
+            },
+            {
+                id: '2',
+                name: 'Banner Flexi Korchin 440gr (High Res)',
+                category: 'Outdoor & Banner',
+                unit: 'm²',
+                hpp: 25000,
+                price: 45000,
+                status: 'available',
+                desc: 'Bahan tebal premium, permukaan lebih halus dan warna pekat tajam tahan lama.',
+                isCustomDimension: true
+            },
+            {
+                id: '3',
+                name: 'Roll Up Banner 60x160cm + Stand Aluminium',
+                category: 'Outdoor & Banner',
+                unit: 'Pcs',
+                hpp: 90000,
+                price: 165000,
+                status: 'available',
+                desc: 'Cetak bahan Albatros / Luster anti gores + Standing Aluminium kokoh & tas pembungkus.',
+                isCustomDimension: false
+            },
+            {
+                id: '4',
+                name: 'Stiker Vinyl Custom Glossy/Doff (A3+)',
+                category: 'Stiker & Label',
+                unit: 'Lembar',
+                hpp: 6500,
+                price: 15000,
+                status: 'available',
+                desc: 'Tahan air & minyak, tidak mudah robek, cetak laser high-res A3+ cocok untuk label botol/makanan.',
+                isCustomDimension: false
+            },
+            {
+                id: '5',
+                name: 'Stiker Bontax / Chromo Ekonomis (A3+)',
+                category: 'Stiker & Label',
+                unit: 'Lembar',
+                hpp: 4000,
+                price: 10000,
+                status: 'available',
+                desc: 'Bahan stiker kertas mengkilap berdaya rekat kuat. Pilihan ekonomis untuk kemasan box & toples.',
+                isCustomDimension: false
+            },
+            {
+                id: '6',
+                name: 'Stiker Transparan A3+ Waterproof',
+                category: 'Stiker & Label',
+                unit: 'Lembar',
+                hpp: 8000,
+                price: 18000,
+                status: 'available',
+                desc: 'Bahan tembus pandang bening elegan dengan tinta tajam. Cocok untuk botol kaca atau cup transparan.',
+                isCustomDimension: false
+            },
+            {
+                id: '7',
+                name: 'Kartu Nama Premium (1 Box = 100 Lembar)',
+                category: 'Promosi & Kartu',
+                unit: 'Box',
+                hpp: 18000,
+                price: 40000,
+                status: 'available',
+                desc: 'Bahan Art Carton 260gr cetak 2 sisi full color, sudah termasuk wadah box mika transparan.',
+                isCustomDimension: false
+            },
+            {
+                id: '8',
+                name: 'Brosur / Flyer Promosi A5 (Art Paper 150gr)',
+                category: 'Promosi & Kartu',
+                unit: 'Lembar',
+                hpp: 450,
+                price: 1200,
+                status: 'available',
+                desc: 'Kertas licin mengkilap cetak 2 sisi full color offset/digital tajam.',
+                isCustomDimension: false
+            },
+            {
+                id: '9',
+                name: 'Print Dokumen HVS & Skripsi / E-Book (A4)',
+                category: 'Cetak Dokumen/Buku',
+                unit: 'Lembar',
+                hpp: 250,
+                price: 500,
+                status: 'available',
+                desc: 'Kertas HVS 75/80gr teks tajam dan hasil cetak bersih tanpa noda tinta.',
+                isCustomDimension: false
+            },
+            {
+                id: '10',
+                name: 'Kemasan Box Custom Die-Cut (Packaging UMKM)',
+                category: 'Merchandise & Packaging',
+                unit: 'Pcs',
+                hpp: 3200,
+                price: 7000,
+                status: 'unavailable',
+                desc: 'Box makanan / produk bahan duplex / ivory foodgrade dengan pola potong sesuai branding.',
+                isCustomDimension: false
+            },
+            {
+                id: '11',
+                name: 'Tumbler Stainless Custom UV / Grafir Laser',
+                category: 'Merchandise & Packaging',
+                unit: 'Pcs',
+                hpp: 38000,
+                price: 70000,
+                status: 'unavailable',
+                desc: 'Tumbler tahan panas/dingin souvenir eksklusif kantor atau hadiah acara.',
+                isCustomDimension: false
+            }
+        ];
+
+        // State variables
+        let products = [];
+        let isOwnerMode = false;
+        let selectedCategory = 'all';
+
+        // Constants
+        const HOTLINE_PHONE = '6281311933172';
+        const WORKSHOP_ADDRESS = 'Jl. Kalijambe-Lambangsari, Tambun Selatan, Kab. Bekasi';
+
+        // Lifecycle Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            loadProducts();
+            renderCategories();
+            renderProducts();
+            updateOwnerTable();
+            populateCalcProducts();
+            lucide.createIcons();
+        });
+
+        // Data Storage Functions
+        function loadProducts() {
+            const saved = localStorage.getItem('snaprint_products_v2');
+            if (saved) {
+                try {
+                    products = JSON.parse(saved);
+                } catch(e) {
+                    products = [...defaultProducts];
+                }
+            } else {
+                products = [...defaultProducts];
+                saveProducts();
+            }
+        }
+
+        function saveProducts() {
+            localStorage.setItem('snaprint_products_v2', JSON.stringify(products));
+        }
+
+        function resetDefaultProducts() {
+            if (confirm('Apakah Anda yakin ingin mengembalikan data katalog ke standar awal?')) {
+                products = JSON.parse(JSON.stringify(defaultProducts));
+                saveProducts();
+                renderCategories();
+                renderProducts();
+                updateOwnerTable();
+                populateCalcProducts();
+                alert('Data produk berhasil direset ke pengaturan standar.');
+            }
+        }
+
+        // Category Pills UI
+        function renderCategories() {
+            const categories = ['all', 'Outdoor & Banner', 'Stiker & Label', 'Promosi & Kartu', 'Cetak Dokumen/Buku', 'Merchandise & Packaging'];
+            const container = document.getElementById('categoryPills');
+            
+            container.innerHTML = categories.map(cat => {
+                const label = cat === 'all' ? 'Semua Produk' : cat;
+                const isActive = selectedCategory === cat;
+                return `
+                    <button onclick="setCategory('${cat}')" class="px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+                        isActive 
+                        ? 'bg-brand-600 text-white shadow-md shadow-brand-500/25 scale-[1.02]' 
+                        : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
+                    }">
+                        ${label}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function setCategory(cat) {
+            selectedCategory = cat;
+            renderCategories();
+            filterProducts();
+        }
+
+        // Product Filter & Render
+        function filterProducts() {
+            renderProducts();
+        }
+
+        function renderProducts() {
+            const container = document.getElementById('productGrid');
+            const search = (document.getElementById('searchInput').value || '').toLowerCase();
+            const statusF = document.getElementById('statusFilter').value;
+
+            const filtered = products.filter(p => {
+                const matchCat = selectedCategory === 'all' || p.category === selectedCategory;
+                const matchSearch = p.name.toLowerCase().includes(search) || (p.desc && p.desc.toLowerCase().includes(search));
+                const matchStatus = statusF === 'all' || p.status === statusF;
+                return matchCat && matchSearch && matchStatus;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full py-16 text-center text-slate-400 bg-white rounded-3xl border border-dashed border-slate-300">
+                        <i data-lucide="package-search" class="w-12 h-12 mx-auto mb-2 text-slate-400"></i>
+                        <p class="text-sm font-bold text-slate-700">Produk tidak ditemukan</p>
+                        <p class="text-xs text-slate-500 mt-1">Coba kata kunci lain atau hubungi hotline kami untuk pesanan custom khusus.</p>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            container.innerHTML = filtered.map(p => {
+                const isAvail = p.status === 'available';
+                const margin = p.price > 0 ? (((p.price - p.hpp) / p.price) * 100).toFixed(1) : 0;
+
+                return `
+                    <div class="bg-white rounded-3xl border border-slate-200/90 p-5 flex flex-col justify-between card-hover group">
+                        <div class="space-y-3">
+                            <div class="flex items-start justify-between gap-2">
+                                <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold ${
+                                    isAvail ? 'bg-emerald-100 text-emerald-800 border border-emerald-200' : 'bg-amber-100 text-amber-800 border border-amber-200'
+                                }">
+                                    ${isAvail ? 'Tersedia' : 'Pre-Order / Hubungi Admin'}
+                                </span>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">${p.category}</span>
+                            </div>
+
+                            <div>
+                                <h3 class="font-extrabold text-slate-900 text-base group-hover:text-brand-600 transition-colors leading-snug">${p.name}</h3>
+                                <p class="text-xs text-slate-500 mt-1.5 line-clamp-2 leading-relaxed">${p.desc || '-'}</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 space-y-3">
+                            <div class="flex items-baseline justify-between">
+                                <span class="text-[11px] font-semibold text-slate-400">Harga Cetak</span>
+                                <div class="text-right">
+                                    <span class="text-lg font-black text-brand-700">Rp ${p.price.toLocaleString('id-ID')}</span>
+                                    <span class="text-[11px] font-bold text-slate-400">/${p.unit}</span>
+                                </div>
+                            </div>
+
+                            ${isOwnerMode ? `
+                                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-2.5 text-[11px] space-y-1 text-amber-950 font-medium">
+                                    <div class="flex justify-between"><span>HPP Modal:</span> <span class="font-black">Rp ${p.hpp.toLocaleString('id-ID')}</span></div>
+                                    <div class="flex justify-between"><span>Profit Margin:</span> <span class="font-black text-emerald-700">${margin}%</span></div>
+                                </div>
+                            ` : ''}
+
+                            ${isAvail ? `
+                                <button onclick="selectForCalculator('${p.id}')" class="w-full py-2.5 bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-700 font-extrabold rounded-xl text-xs transition-colors flex items-center justify-center gap-2">
+                                    <i data-lucide="calculator" class="w-4 h-4"></i>
+                                    Hitung Produk Ini
+                                </button>
+                            ` : `
+                                <a href="https://wa.me/${HOTLINE_PHONE}?text=Halo%20Snaprint,%20apakah%20produk%20*${encodeURIComponent(p.name)}*%20bisa%20dipesan%20custom?" target="_blank" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-xl text-xs flex items-center justify-center gap-1.5 transition-colors">
+                                    <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Tanya Admin
+                                </a>
+                            `}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        // Owner Table Management
+        function updateOwnerTable() {
+            const table = document.getElementById('ownerProductTable');
+            table.innerHTML = products.map((p, idx) => {
+                const margin = p.price > 0 ? (((p.price - p.hpp) / p.price) * 100).toFixed(1) : 0;
+                return `
+                    <tr class="hover:bg-slate-800/60 transition-colors">
+                        <td class="p-4">
+                            <div class="font-bold text-white text-sm">${p.name}</div>
+                            <div class="text-[10px] text-slate-400">${p.category}</div>
+                        </td>
+                        <td class="p-4 font-bold text-slate-300">${p.unit}</td>
+                        <td class="p-4">
+                            <input type="number" value="${p.hpp}" onchange="updateProductField(${idx}, 'hpp', this.value)" class="w-28 p-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs font-bold focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </td>
+                        <td class="p-4">
+                            <input type="number" value="${p.price}" onchange="updateProductField(${idx}, 'price', this.value)" class="w-28 p-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs font-bold focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </td>
+                        <td class="p-4">
+                            <span class="font-black px-2 py-1 rounded text-xs ${margin >= 30 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'}">${margin}%</span>
+                        </td>
+                        <td class="p-4">
+                            <select onchange="updateProductField(${idx}, 'status', this.value)" class="p-2 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white font-semibold">
+                                <option value="available" ${p.status === 'available' ? 'selected' : ''}>Tersedia</option>
+                                <option value="unavailable" ${p.status === 'unavailable' ? 'selected' : ''}>Belum Tersedia</option>
+                            </select>
+                        </td>
+                        <td class="p-4 text-center">
+                            <button onclick="deleteProduct(${idx})" class="p-2 text-rose-400 hover:text-rose-200 hover:bg-rose-500/20 rounded-lg transition-colors" title="Hapus Produk">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+            lucide.createIcons();
+        }
+
+        function updateProductField(index, field, value) {
+            if (field === 'hpp' || field === 'price') {
+                products[index][field] = parseFloat(value) || 0;
+            } else {
+                products[index][field] = value;
+            }
+            saveProducts();
+            updateOwnerTable();
+            renderProducts();
+            populateCalcProducts();
+        }
+
+        function deleteProduct(index) {
+            if (confirm(`Hapus produk "${products[index].name}" dari sistem?`)) {
+                products.splice(index, 1);
+                saveProducts();
+                updateOwnerTable();
+                renderProducts();
+                populateCalcProducts();
+            }
+        }
+
+        // Owner Authentication PIN
+        function toggleOwnerMode() {
+            if (isOwnerMode) {
+                logoutOwner();
+            } else {
+                document.getElementById('loginModal').classList.remove('hidden');
+                document.getElementById('ownerPinInput').value = '';
+                document.getElementById('pinErrorMsg').classList.add('hidden');
+                document.getElementById('ownerPinInput').focus();
+            }
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function verifyOwnerPin() {
+            const pin = document.getElementById('ownerPinInput').value.trim();
+            if (pin === '1234') {
+                isOwnerMode = true;
+                closeLoginModal();
+                document.getElementById('ownerBar').classList.remove('hidden');
+                document.getElementById('ownerPanelSection').classList.remove('hidden');
+                document.getElementById('ownerBtnText').innerText = 'Keluar Owner';
+                updateOwnerTable();
+                renderProducts();
+                document.getElementById('ownerPanelSection').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                document.getElementById('pinErrorMsg').classList.remove('hidden');
+            }
+        }
+
+        function logoutOwner() {
+            isOwnerMode = false;
+            document.getElementById('ownerBar').classList.add('hidden');
+            document.getElementById('ownerPanelSection').classList.add('hidden');
+            document.getElementById('ownerBtnText').innerText = 'Mode Owner';
+            renderProducts();
+        }
+
+        // Add Product Form
+        function openAddProductModal() {
+            document.getElementById('addProductModal').classList.remove('hidden');
+        }
+
+        function closeAddProductModal() {
+            document.getElementById('addProductModal').classList.add('hidden');
+        }
+
+        function saveNewProduct(e) {
+            e.preventDefault();
+            const name = document.getElementById('newProdName').value.trim();
+            const category = document.getElementById('newProdCategory').value;
+            const unit = document.getElementById('newProdUnit').value;
+            const hpp = parseFloat(document.getElementById('newProdHpp').value) || 0;
+            const price = parseFloat(document.getElementById('newProdPrice').value) || 0;
+            const status = document.getElementById('newProdStatus').value;
+            const desc = document.getElementById('newProdDesc').value.trim();
+
+            const newProd = {
+                id: Date.now().toString(),
+                name,
+                category,
+                unit,
+                hpp,
+                price,
+                status,
+                desc,
+                isCustomDimension: unit === 'm²'
+            };
+
+            products.unshift(newProd);
+            saveProducts();
+            updateOwnerTable();
+            renderProducts();
+            populateCalcProducts();
+            closeAddProductModal();
+            document.getElementById('newProductForm').reset();
+            alert('Produk baru berhasil ditambahkan!');
+        }
+
+        // Calculator Engine
+        function populateCalcProducts() {
+            const select = document.getElementById('calcProductSelect');
+            const availableProds = products.filter(p => p.status === 'available');
+
+            if (availableProds.length === 0) {
+                select.innerHTML = `<option value="">Tidak ada produk yang siap cetak</option>`;
+                return;
+            }
+
+            const currentVal = select.value;
+            select.innerHTML = availableProds.map(p => `
+                <option value="${p.id}">${p.name} — Rp ${p.price.toLocaleString('id-ID')} / ${p.unit}</option>
+            `).join('');
+
+            if (currentVal && availableProds.some(p => p.id === currentVal)) {
+                select.value = currentVal;
+            }
+
+            updateCalcFields();
+        }
+
+        function selectForCalculator(prodId) {
+            populateCalcProducts();
+            document.getElementById('calcProductSelect').value = prodId;
+            updateCalcFields();
+            document.getElementById('kalkulator').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateCalcFields() {
+            const selectedId = document.getElementById('calcProductSelect').value;
+            const prod = products.find(p => p.id === selectedId);
+            const dimBox = document.getElementById('dimensionInputs');
+            const unitLabel = document.getElementById('calcUnitLabel');
+
+            if (!prod) return;
+
+            unitLabel.innerText = prod.unit;
+
+            if (prod.unit === 'm²' || prod.isCustomDimension) {
+                dimBox.classList.remove('hidden');
+            } else {
+                dimBox.classList.add('hidden');
+            }
+
+            calculateEstimate();
+        }
+
+        function calculateEstimate() {
+            const selectedId = document.getElementById('calcProductSelect').value;
+            const prod = products.find(p => p.id === selectedId);
+
+            if (!prod) return;
+
+            const qty = Math.max(1, parseInt(document.getElementById('calcQty').value) || 1);
+            let unitPrice = prod.price;
+            let subtotal = 0;
+            let dimensionStr = '-';
+
+            if (prod.unit === 'm²' || prod.isCustomDimension) {
+                const lenCm = Math.max(1, parseFloat(document.getElementById('calcLength').value) || 100);
+                const widCm = Math.max(1, parseFloat(document.getElementById('calcWidth').value) || 100);
+                let rawAreaM2 = (lenCm * widCm) / 10000;
+                let billableArea = rawAreaM2 < 1 ? 1 : rawAreaM2; // Minimum 1 m2 policy
+                subtotal = billableArea * unitPrice * qty;
+                dimensionStr = `${lenCm}cm x ${widCm}cm (${rawAreaM2.toFixed(2)} m²)`;
+            } else {
+                subtotal = unitPrice * qty;
+                dimensionStr = `Standard ${prod.unit}`;
+            }
+
+            // Finishing calculations
+            let finishingTotal = 0;
+            let finishingList = [];
+            document.querySelectorAll('.calc-finishing:checked').forEach(cb => {
+                const cost = parseFloat(cb.value) || 0;
+                finishingTotal += cost * qty;
+                const parentText = cb.closest('label').querySelector('span').innerText.trim();
+                finishingList.push(parentText);
+            });
+
+            const grandTotal = subtotal + finishingTotal;
+
+            // Summary Card Updates
+            document.getElementById('summaryProduct').innerText = prod.name;
+            document.getElementById('summarySize').innerText = dimensionStr;
+            document.getElementById('summaryQty').innerText = `${qty} ${prod.unit}`;
+            document.getElementById('summaryUnitPrice').innerText = `Rp ${prod.price.toLocaleString('id-ID')} / ${prod.unit}`;
+            document.getElementById('summaryFinishing').innerText = finishingList.length > 0 ? finishingList.join(', ') : 'Tanpa Finishing';
+            document.getElementById('totalEstimatePrice').innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
+        }
+
+        // WhatsApp Direct Order Formatter
+        function sendToWhatsApp() {
+            const selectedId = document.getElementById('calcProductSelect').value;
+            const prod = products.find(p => p.id === selectedId);
+
+            if (!prod) {
+                alert('Silakan pilih produk terlebih dahulu!');
+                return;
+            }
+
+            const prodName = document.getElementById('summaryProduct').innerText;
+            const size = document.getElementById('summarySize').innerText;
+            const qty = document.getElementById('summaryQty').innerText;
+            const finishing = document.getElementById('summaryFinishing').innerText;
+            const total = document.getElementById('totalEstimatePrice').innerText;
+            const notes = document.getElementById('calcNotes').value.trim() || 'Tidak ada catatan tambahan';
+
+            const textMsg = 
+                `*ORDER / KONSULTASI CETAK SNAPRINT*\n` +
+                `---------------------------------------------\n` +
+                `Halo Admin *Snaprint Digital Printing* (Tambun Selatan),\n` +
+                `Saya ingin memesan / menanyakan estimasi cetak berikut:\n\n` +
+                `• *Produk Cetak:* ${prodName}\n` +
+                `• *Ukuran / Dimensi:* ${size}\n` +
+                `• *Jumlah (Qty):* ${qty}\n` +
+                `• *Pilihan Finishing:* ${finishing}\n` +
+                `• *Catatan File:* ${notes}\n` +
+                `• *Total Estimasi:* ${total}\n\n` +
+                `---------------------------------------------\n` +
+                `Mohon arahan untuk pengiriman file desain dan konfirmasi pesanan. Terima kasih!`;
+
+            const encoded = encodeURIComponent(textMsg);
+            const waUrl = `https://wa.me/${HOTLINE_PHONE}?text=${encoded}`;
+            window.open(waUrl, '_blank');
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
