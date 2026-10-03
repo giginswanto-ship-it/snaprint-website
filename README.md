@@ -48,4 +48,5 @@ Website interaktif dan dinamis untuk **SNAPRINT DIGITAL PRINTING** yang berlokas
 
 ---
 
-&copy; 2026 SNAPRINT DIGITAL PRINTING. All Rights Reserved.
+&copy; 2026 SNAPRINT DIGITAL PRINTING. All Rights Reserved.  
+*Website dibangun dan dikelola oleh [Duta Global Tech](https://dutaglobaltech.com/).*
