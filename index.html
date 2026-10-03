@@ -613,29 +613,113 @@
             <p class="text-slate-500 text-sm mt-1">Sistem order cepat tanpa harus antre lama di tempat.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm relative text-center space-y-3 card-hover">
-                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto font-black text-xl border border-brand-100 shadow-sm">1</div>
-                <h3 class="font-extrabold text-slate-900 text-base">Pilih & Hitung</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">Pilih produk dan gunakan kalkulator online untuk mengetahui estimasi biaya secara transparan.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Step 1: Pilih & Hitung -->
+            <div class="relative rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm card-hover flex flex-col justify-between min-h-[360px] group bg-slate-900">
+                <img src="step1.jpg" alt="Pilih & Hitung Estimasi" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-all duration-500 opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-900/40"></div>
+
+                <!-- Top Number Badge -->
+                <div class="relative z-10 p-5 flex justify-between items-start">
+                    <div class="w-12 h-12 bg-white/90 backdrop-blur-md text-brand-700 rounded-2xl flex items-center justify-center font-black text-xl shadow-lg border border-white/60">
+                        1
+                    </div>
+                    <span class="px-3 py-1 bg-brand-500/20 backdrop-blur-md text-sky-300 font-extrabold text-[10px] rounded-full border border-sky-400/30 uppercase tracking-wider">
+                        Online Calculator
+                    </span>
+                </div>
+
+                <!-- Bottom Content -->
+                <div class="relative z-10 p-6 space-y-2 text-left">
+                    <h3 class="font-black text-white text-lg group-hover:text-sky-300 transition-colors flex items-center gap-2">
+                        Pilih & Hitung
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-sky-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                    </h3>
+                    <p class="text-xs text-slate-200 leading-relaxed font-normal">
+                        Pilih jenis produk cetak dan gunakan kalkulator online otomatis untuk mengetahui estimasi biaya secara akurat & transparan.
+                    </p>
+                </div>
             </div>
             
-            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm relative text-center space-y-3 card-hover">
-                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto font-black text-xl border border-brand-100 shadow-sm">2</div>
-                <h3 class="font-extrabold text-slate-900 text-base">Kirim File via WA</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">Klik tombol pesan WA, kirimkan file cetak (PDF/TIFF/JPG) ke admin hotline kami <strong>081311933172</strong>.</p>
+            <!-- Step 2: Kirim File via WA -->
+            <div class="relative rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm card-hover flex flex-col justify-between min-h-[360px] group bg-slate-900">
+                <img src="step2.jpg" alt="Kirim File Cetak via WhatsApp" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-all duration-500 opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-900/40"></div>
+
+                <!-- Top Number Badge -->
+                <div class="relative z-10 p-5 flex justify-between items-start">
+                    <div class="w-12 h-12 bg-white/90 backdrop-blur-md text-emerald-700 rounded-2xl flex items-center justify-center font-black text-xl shadow-lg border border-white/60">
+                        2
+                    </div>
+                    <span class="px-3 py-1 bg-emerald-500/20 backdrop-blur-md text-emerald-300 font-extrabold text-[10px] rounded-full border border-emerald-400/30 uppercase tracking-wider">
+                        Kirim File WA
+                    </span>
+                </div>
+
+                <!-- Bottom Content -->
+                <div class="relative z-10 p-6 space-y-2 text-left">
+                    <h3 class="font-black text-white text-lg group-hover:text-emerald-300 transition-colors flex items-center gap-2">
+                        Kirim File via WA
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                    </h3>
+                    <p class="text-xs text-slate-200 leading-relaxed font-normal">
+                        Klik tombol order WhatsApp, kirimkan file cetak (PDF, TIFF, AI, JPG) ke nomor hotline kami yang siap merespons dengan cepat.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm relative text-center space-y-3 card-hover">
-                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto font-black text-xl border border-brand-100 shadow-sm">3</div>
-                <h3 class="font-extrabold text-slate-900 text-base">Acc & Produksi</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">Admin akan melakukan preflight file, setelah pembayaran pesanan langsung masuk antrean cetak kilat.</p>
+            <!-- Step 3: Acc & Produksi -->
+            <div class="relative rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm card-hover flex flex-col justify-between min-h-[360px] group bg-slate-900">
+                <img src="step3.jpg" alt="Acc Preflight & Produksi Cetak" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-all duration-500 opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-900/40"></div>
+
+                <!-- Top Number Badge -->
+                <div class="relative z-10 p-5 flex justify-between items-start">
+                    <div class="w-12 h-12 bg-white/90 backdrop-blur-md text-amber-700 rounded-2xl flex items-center justify-center font-black text-xl shadow-lg border border-white/60">
+                        3
+                    </div>
+                    <span class="px-3 py-1 bg-amber-500/20 backdrop-blur-md text-amber-300 font-extrabold text-[10px] rounded-full border border-amber-400/30 uppercase tracking-wider">
+                        Mesin & Cetak Kilat
+                    </span>
+                </div>
+
+                <!-- Bottom Content -->
+                <div class="relative z-10 p-6 space-y-2 text-left">
+                    <h3 class="font-black text-white text-lg group-hover:text-amber-300 transition-colors flex items-center gap-2">
+                        Acc & Produksi
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-amber-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                    </h3>
+                    <p class="text-xs text-slate-200 leading-relaxed font-normal">
+                        Admin preflight file Anda untuk memastikan resolusi tajam, lalu pesanan langsung diproses mesin digital printing berkecepatan tinggi.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm relative text-center space-y-3 card-hover">
-                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto font-black text-xl border border-brand-100 shadow-sm">4</div>
-                <h3 class="font-extrabold text-slate-900 text-base">Ambil / Delivery</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">Pesanan dapat diambil di workshop Tambun Selatan atau dikirim menggunakan kurir instan ke lokasi Anda.</p>
+            <!-- Step 4: Ambil / Delivery -->
+            <div class="relative rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm card-hover flex flex-col justify-between min-h-[360px] group bg-slate-900">
+                <img src="step4.jpg" alt="Ambil di Workshop atau Delivery" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-all duration-500 opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-900/40"></div>
+
+                <!-- Top Number Badge -->
+                <div class="relative z-10 p-5 flex justify-between items-start">
+                    <div class="w-12 h-12 bg-white/90 backdrop-blur-md text-accent-700 rounded-2xl flex items-center justify-center font-black text-xl shadow-lg border border-white/60">
+                        4
+                    </div>
+                    <span class="px-3 py-1 bg-accent-500/20 backdrop-blur-md text-accent-300 font-extrabold text-[10px] rounded-full border border-accent-400/30 uppercase tracking-wider">
+                        Pick-Up / Delivery
+                    </span>
+                </div>
+
+                <!-- Bottom Content -->
+                <div class="relative z-10 p-6 space-y-2 text-left">
+                    <h3 class="font-black text-white text-lg group-hover:text-accent-300 transition-colors flex items-center gap-2">
+                        Ambil / Delivery
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-accent-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                    </h3>
+                    <p class="text-xs text-slate-200 leading-relaxed font-normal">
+                        Hasil cetak yang sudah rapi dipacking siap diambil langsung di workshop Snaprint atau dikirim memakai kurir instan ke alamat Anda.
+                    </p>
+                </div>
             </div>
         </div>
 
