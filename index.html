@@ -884,53 +884,95 @@
     </section>
 
     <!-- PANDUAN FILE SIAP CETAK & PREFLIGHT -->
-    <section id="panduan" class="py-16 bg-white border-t border-slate-200">
+    <section id="panduan" class="py-16 lg:py-20 bg-slate-100/90 border-t border-b border-slate-300/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                <div class="lg:col-span-5 space-y-4">
-                    <span class="text-xs font-black uppercase tracking-widest text-brand-600 block">Checklist File Desain</span>
-                    <h2 class="text-3xl font-black text-slate-900">Panduan File Siap Cetak (Agar Hasil Maksimal)</h2>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Pastikan file desain Anda memenuhi standar percetakan digital untuk menghindari warna belang, tulisan buram, atau gambar terpotong.
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                <!-- Sisi Kiri: Judul & Bantuan Desain -->
+                <div class="lg:col-span-5 space-y-5">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-600 text-white text-xs font-black tracking-wider uppercase shadow-sm">
+                        <i data-lucide="check-square" class="w-3.5 h-3.5"></i> Checklist File Desain
+                    </div>
+                    
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 leading-tight">
+                        Panduan File Siap Cetak <br class="hidden sm:inline">
+                        <span class="text-brand-700">(Agar Hasil Maksimal)</span>
+                    </h2>
+                    
+                    <p class="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed">
+                        Pastikan file desain Anda memenuhi 4 standar percetakan digital profesional ini agar hasil cetak tajam, warna tidak meleset, dan tidak terpotong pisau mesin.
                     </p>
-                    <div class="p-4 bg-sky-50 rounded-2xl border border-sky-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-sky-900">
-                        <div class="flex items-start gap-2.5">
-                            <i data-lucide="help-circle" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
-                            <span>Belum punya desain siap cetak? Tim kami siap membantu setting layout dan konsultasi format file gratis via WhatsApp.</span>
+
+                    <!-- Box Bantuan Desain dengan Kontras Tegas -->
+                    <div class="p-5 bg-gradient-to-br from-slate-900 via-slate-950 to-brand-950 rounded-3xl border-2 border-slate-700 shadow-xl space-y-3.5 text-white">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-400/40">
+                                <i data-lucide="help-circle" class="w-5 h-5"></i>
+                            </div>
+                            <div class="space-y-1">
+                                <h4 class="font-black text-sm text-white">Belum Punya Desain Siap Cetak?</h4>
+                                <p class="text-xs text-slate-200 leading-relaxed">
+                                    Tim desainer Snaprint siap membantu setting layout, cek resolusi gambar, dan konsultasi format file gratis langsung via WhatsApp.
+                                </p>
+                            </div>
                         </div>
-                        <a href="https://wa.me/6281311933172?text=Halo%20Admin%20Snaprint,%20saya%20ingin%20konsultasi%20bantuan%20desain%20dan%20format%20file%20cetak" target="_blank" class="shrink-0 px-3.5 py-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-xl text-[11px] flex items-center gap-1.5 transition-colors shadow-sm">
-                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Hubungi WA
+                        <a href="https://wa.me/6281311933172?text=Halo%20Admin%20Snaprint,%20saya%20ingin%20konsultasi%20bantuan%20desain%20dan%20format%20file%20cetak" target="_blank" class="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/30 hover:scale-[1.02] transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Konsultasi Format File via WA
                         </a>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
-                        <div class="flex items-center gap-2 text-brand-700 font-bold text-xs">
-                            <i data-lucide="palette" class="w-4 h-4"></i> Color Mode CMYK
+                <!-- Sisi Kanan: 4 Kotak Panduan dengan Latar Belakang Tegas & Teks Hitam Pekat -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <!-- Item 1: CMYK -->
+                    <div class="p-5 sm:p-6 rounded-3xl bg-white border-2 border-sky-300 shadow-md hover:shadow-xl hover:border-sky-500 transition-all space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center font-black border border-sky-200 shrink-0">
+                                <i data-lucide="palette" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-base font-black text-slate-950">Color Mode CMYK</h3>
                         </div>
-                        <p class="text-[11px] text-slate-600">Gunakan format warna <strong>CMYK</strong> (bukan RGB) agar warna cetak sesuai dengan tampilan visual.</p>
+                        <p class="text-xs sm:text-[13px] text-slate-900 font-medium leading-relaxed">
+                            Gunakan format warna <strong class="text-sky-700 font-extrabold bg-sky-50 px-1.5 py-0.5 rounded border border-sky-200">CMYK</strong> (bukan RGB). Warna RGB hanya untuk tampilan layar HP/monitor, sedangkan mesin cetak wajib CMYK agar warna tidak berubah kusam.
+                        </p>
                     </div>
 
-                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
-                        <div class="flex items-center gap-2 text-brand-700 font-bold text-xs">
-                            <i data-lucide="image" class="w-4 h-4"></i> Resolusi Min. 300 DPI
+                    <!-- Item 2: Resolusi -->
+                    <div class="p-5 sm:p-6 rounded-3xl bg-white border-2 border-emerald-300 shadow-md hover:shadow-xl hover:border-emerald-500 transition-all space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black border border-emerald-200 shrink-0">
+                                <i data-lucide="image" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-base font-black text-slate-950">Resolusi Min. 300 DPI</h3>
                         </div>
-                        <p class="text-[11px] text-slate-600">Pastikan resolusi minimal <strong>300 DPI</strong> (untuk cetak dokumen/stiker) atau 150 DPI (untuk banner besar) agar tajam.</p>
+                        <p class="text-xs sm:text-[13px] text-slate-900 font-medium leading-relaxed">
+                            Pastikan resolusi file minimal <strong class="text-emerald-700 font-extrabold bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">300 DPI</strong> untuk stiker, kartu nama, & brosur (atau 150 DPI skala 1:1 untuk spanduk besar) agar hasil cetak tajam dan tidak pecah.
+                        </p>
                     </div>
 
-                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
-                        <div class="flex items-center gap-2 text-brand-700 font-bold text-xs">
-                            <i data-lucide="crop" class="w-4 h-4"></i> Berikan Bleed & Margin Aman
+                    <!-- Item 3: Bleed & Margin Aman -->
+                    <div class="p-5 sm:p-6 rounded-3xl bg-white border-2 border-amber-300 shadow-md hover:shadow-xl hover:border-amber-500 transition-all space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-black border border-amber-200 shrink-0">
+                                <i data-lucide="crop" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-base font-black text-slate-950">Bleed & Safe Margin</h3>
                         </div>
-                        <p class="text-[11px] text-slate-600">Tambahkan bleed 2-3 mm di sekeliling desain agar teks penting tidak terpotong pisau potong.</p>
+                        <p class="text-xs sm:text-[13px] text-slate-900 font-medium leading-relaxed">
+                            Tambahkan bleed lebihan cetak serta beri <strong class="text-amber-800 font-extrabold bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">jarak aman 2–3 mm</strong> dari garis potong agar tulisan penting atau logo tidak terpotong pisau finishing mesin.
+                        </p>
                     </div>
 
-                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
-                        <div class="flex items-center gap-2 text-brand-700 font-bold text-xs">
-                            <i data-lucide="file-check" class="w-4 h-4"></i> Format File PDF / TIFF / JPG
+                    <!-- Item 4: Format File -->
+                    <div class="p-5 sm:p-6 rounded-3xl bg-white border-2 border-purple-300 shadow-md hover:shadow-xl hover:border-purple-500 transition-all space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-black border border-purple-200 shrink-0">
+                                <i data-lucide="file-check" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-base font-black text-slate-950">Format File Siap Cetak</h3>
                         </div>
-                        <p class="text-[11px] text-slate-600">Kirim dalam bentuk <strong>PDF High-Res, TIFF, PNG</strong> atau CDR/AI dengan font yang sudah di-<em>convert/curves</em>.</p>
+                        <p class="text-xs sm:text-[13px] text-slate-900 font-medium leading-relaxed">
+                            Kirim file dalam format <strong class="text-purple-700 font-extrabold bg-purple-50 px-1.5 py-0.5 rounded border border-purple-200">PDF High-Res, TIFF, PNG</strong> atau master <strong>CDR / AI</strong> dengan seluruh font yang sudah di-<em>convert to curves/outlines</em>.
+                        </p>
                     </div>
                 </div>
             </div>
