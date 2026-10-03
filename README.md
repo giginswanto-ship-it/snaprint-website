@@ -7,9 +7,12 @@ Website interaktif dan dinamis untuk **SNAPRINT DIGITAL PRINTING** yang berlokas
 
 ---
 
-## 📍 Informasi & Kontak Workshop
-- **Alamat:** Jl. Kalijambe-Lambangsari, Tambun Selatan, Kab. Bekasi
-- **No. Hotline / WhatsApp:** `0813-1193-3172` / `+62 813-1193-3172`
+## 📍 Informasi & Cabang Workshop Snaprint
+1. **Snaprint Grand Wisata (Pusat):** Jl. Kalijambe-Lambangsari, Tambun Selatan, Bekasi &bull; WhatsApp: `0813-1193-3172`
+2. **Snaprint Metland Cibitung:** Cibitung, Kab. Bekasi &bull; WhatsApp: `0821-2855-7078`
+3. **Snaprint Dukuh Zamrud:** Mustikajaya, Kota Bekasi &bull; WhatsApp: `0889-7557-8819`
+4. **Snaprint Samarinda:** Samarinda, Kalimantan Timur &bull; WhatsApp: `0811-5819-190`
+
 - **Jam Operasional:** 
   - Senin – Sabtu: 08.00 – 21.00 WIB
   - Minggu: 10.00 – 17.00 WIB
