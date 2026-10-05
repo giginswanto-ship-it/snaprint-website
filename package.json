@@ -1,0 +1,16 @@
+{
+  "name": "snaprint-website",
+  "version": "1.0.0",
+  "description": "Website Snaprint Digital Printing Tambun Selatan",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "snaprint",
+    "digital-printing",
+    "bekasi"
+  ],
+  "author": "Snaprint Digital Printing",
+  "license": "ISC"
+}
